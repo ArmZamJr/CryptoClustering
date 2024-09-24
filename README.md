@@ -10,6 +10,19 @@ market_data_df["class"] = model.labels_
         labels = k_model.labels_
 # Create a PCA model instance and set `n_components=3`.
 pca = PCA(n_components=3)
+### Determine the Weights of Each Feature on each Principal Component
+ask-314863 
+TA Andrew
+Metin Akyol - Instructor 
+all helped me understand the weights.
+# Create a copy of the scaled PCA DataFrame
+df_market_data_pca_predictions = df_market_data_pca.copy()
+
+# Add a new column to the copy of the PCA DataFrame with the predicted clusters
+df_market_data_pca_predictions["crypto_cluster"] = crypto_clusters_pca
+
+# Display the copy of the scaled PCA DataFrame
+df_market_data_pca_predictions.head()
 
 
 
